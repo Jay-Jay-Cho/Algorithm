@@ -47,7 +47,8 @@ stack.push(new Node(temp.depth+1,temp.value-numbers[temp.depth+1]));
 
 
 ## 숙지해야할 점
-1) 반복문 내에서의 break와 continue 사용법 숙지. 특히나 DFS 반복문에서 break를 거는 이유는 stack에서 꺼낸 노드의 자식노드로 이동하기 위해서. break를 쓰지 않으면, for문이 계속 돌기 때문에 자식노드가 아닌 인접노드를 stack에 계속 넣음.
+1) DFS문제인데 입력 값이 인접행렬(2차원 배열)형식이 아닐 경우, node 클래스를 생성하여 접근할 것.
+2) depth와 비교할 때는 입력 값의 length에서 1을 빼야 함(케바케겠지만 시작 depth를 -1로 줬고, 새로운 node를 stack에 삽입시 직접 입력 배열의 인덱스로 value를 접근하기 )
 
 <br>
 <br>
