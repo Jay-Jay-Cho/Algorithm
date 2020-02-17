@@ -35,6 +35,12 @@ class Node{
     }
 ```
 
+* 아직 leaf node에 도착하지 않았을 때에는, 새로운 node를 생성하여 stack에 삽입
+```java
+stack.push(new Node(temp.depth+1,temp.value+numbers[temp.depth+1]));
+stack.push(new Node(temp.depth+1,temp.value-numbers[temp.depth+1]));
+```
+
 <br>
 <br>
 <br>
