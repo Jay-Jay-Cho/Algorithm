@@ -2,6 +2,7 @@
 
 ### &#128526;
 [문제 링크](https://www.acmicpc.net/problem/1260)
+<br>
 [참고 자료](https://mygumi.tistory.com/102)
 
 <br>
