@@ -1,8 +1,7 @@
 
 
 ### &#128526;
-[문제 링크](https://www.acmicpc.net/problem/1260)
-[참고 자료](https://mygumi.tistory.com/102)
+[문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43165)
 
 <br>
 <br>
@@ -10,17 +9,27 @@
 
 ## 설명
 
-가장 기본적인 DFS, BFS 문제.
-* DFS = Stack or Recursive
-* BFS = Queue
+* Level: 2
+* DFS
+* 입력값으로 받는 numbers 배열을 활용해서 target을 완성시키고, 만족하는 경우의 수 만큼 answer++
 
 
 <br>
 <br>
 <br>
 
-## 꿀팁
-* Array 전체 초기화 method: Arrays.fill(array_name, value)
+## 접근법
+* numbers배열의 값들이 각각 +numbers[i] 혹은 -numbers[i] 두 개의 경우만을 가지기 때문에 DFS를 활용해서 모든 경우의 수의 끝(leaf node)이 target과 맞는지 체크.
+'''java
+class Node{
+        int depth;
+        int value;
+        Node(int depth, int value){
+            this.depth = depth;
+            this.value = value;
+        }
+    }
+'''
 
 <br>
 <br>
