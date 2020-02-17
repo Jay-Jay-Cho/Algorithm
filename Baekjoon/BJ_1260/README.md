@@ -14,6 +14,7 @@
 가장 기본적인 DFS, BFS 문제.
 * DFS = Stack or Recursive
 * BFS = Queue
+* BFS는 주로 최단경로 문제
 
 
 <br>
