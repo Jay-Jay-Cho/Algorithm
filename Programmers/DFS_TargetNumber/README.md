@@ -23,7 +23,6 @@
 <br>
 
 ```java
-
 class Node{
         int depth;
         int value;
@@ -32,7 +31,6 @@ class Node{
             this.value = value;
         }
     }
-    
 ```
 
 <br>
