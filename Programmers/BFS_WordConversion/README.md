@@ -3,6 +3,7 @@
 ### &#128526;
 [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43163)
 
+[참고 자료](https://heedipro.tistory.com/234)
 <br>
 <br>
 <br>
