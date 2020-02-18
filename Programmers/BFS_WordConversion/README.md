@@ -8,7 +8,6 @@
 <br>
 
 ## 설명
-
 * Level: 3
 * BFS
 * words 배열안의 단어변환을 통해 begin에서 target으로 치환
@@ -23,32 +22,37 @@
 2) 다른 문제들과는 달리 입력 값으로 주어진 words 배열을 곧바로 풀이에 활용할 수 없었기 때문에, 인접행렬/인접리스트를 별도로 구성하거나 Node클래스를 생성해서 사용.
 ```java
 class Node{
-		int count;  //몇 단계를 거쳤는지 누적
-		String value; //실제 word
-		Node(String value, int count){
-			this.value = value;
-			this.count = count;
-		}
+	int count;  //몇 단계를 거쳤는지 누적
+	String value; //실제 word
+	Node(String value, int count){
+		this.value = value;
+		this.count = count;
 	}
+}
 ```
-3) 
-
-
-
-* 아직 leaf node에 도착하지 않았을 때에는, 새로운 node를 생성하여 stack에 삽입
+3) 다음 노드를 큐에 넣을 때에 비교를 통해 해당 조건에 만족하는 단어들만 넣음. 즉, 한번도 방문하지 않았던 노드임과 동시에 다음 노드의 word와 현재 노드의 word의 글자수 차이가 1개 이하일 때만 큐에 넣음(isNext함수를 통해). 왜냐하면 무조건 한 글자만 변환이 가능하니까.
 ```java
-stack.push(new Node(temp.depth+1,temp.value+numbers[temp.depth+1]));
-stack.push(new Node(temp.depth+1,temp.value-numbers[temp.depth+1]));
+for(int i=0;i<arr_length;i++) {
+	if(!visited[i] && isNext(temp.value,words[i],target_length)) {
+		q.add(new Node(words[i],temp.count+1));
+		visited[i] = true;
+	}
+}
 ```
-
 <br>
 <br>
 <br>
 
+## 유용한 함수
+* 해당 배열에 특정 문자열이 포함됐는지 확인: Arrays.asList(words).contains(target)
+
+<br>
+<br>
+<br>
 
 ## 숙지해야할 점
-1) DFS문제인데 입력 값이 인접행렬(2차원 배열)형식이 아닐 경우, node 클래스를 생성하여 접근할 것.
-2) depth와 비교할 때는 입력 값의 length에서 1을 빼야 함(케바케겠지만 시작 depth를 -1로 줬고, 새로운 node를 stack에 삽입시 직접 입력 배열의 인덱스로 value를 접근하기 )
+1) 문자열 비교 처리 함수 숙지해야할 것. (반복문을 활용한 charAt 등)
+2) 무한 사이클 방지를 위해 flag(boolean[] visited)를 활용할 것.
 
 <br>
 <br>
