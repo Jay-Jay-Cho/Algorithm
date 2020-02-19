@@ -1,8 +1,7 @@
 
 
 ### &#128526;
-[문제 링크](https://www.acmicpc.net/problem/1260)
-[참고 자료](https://mygumi.tistory.com/102)
+[문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42576)
 
 <br>
 <br>
@@ -10,7 +9,7 @@
 
 ## 설명
 
-가장 기본적인 DFS, BFS 문제.
+가장 기본적인 Hash 문제.
 * DFS = Stack or Recursive
 * BFS = Queue
 
