@@ -33,7 +33,7 @@
 <br>
 
 ## 숙지해야할 점
-1) 자바에서 제공하는 Arrays.sort()는 내부적으로 Dual-Pivot Quick Sort를 사용.(피봇이 2개!!!!)
+1) 자바에서 제공하는 Arrays.sort()는 내부적으로 Primitive Type의 경우 Dual-Pivot Quick Sort(피봇이 2개!!!!), non-primitive type의 경우 Tim Sort(Merge Sort+Insertion Sort)를 사용. Tim Sort의 경우, 최악의 시간복잡도는 O(nlogn)
 [참고자료](https://defacto-standard.tistory.com/38)
 2) 갯수가 적을 때는 sort, 갯수가 많을 때는 parallelSort 사용
 3) 일단 문자열 문제가 나오면, 정렬 여부부터 확인!!!!
