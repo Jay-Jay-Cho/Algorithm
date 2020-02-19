@@ -2,32 +2,40 @@
 
 ### &#128526;
 [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42576)
-
 <br>
 <br>
 <br>
 
 ## 설명
+* Level: 1
+* Hash
+* participant 배열과 completion 배열을 비교해서 없는 문자열(완주하지 못한 선수) 찾기.
 
-가장 기본적인 Hash 문제.
-* DFS = Stack or Recursive
-* BFS = Queue
-
-
-<br>
-<br>
-<br>
-
-## 꿀팁
-* Array 전체 초기화 method: Arrays.fill(array_name, value)
 
 <br>
 <br>
 <br>
 
+## 접근법
+1) 맨 처음에는 이중for문을 생각했는데, 효율성(time complexity)부분에서 걸려서 out...
+2) 두 배열 모두 정렬한 후에, for문을 동시에 돌리면서 체크. 동일한 인덱스에 다른 값이 있다면, participant 해당 인덱스가 완주하지 못한 것. for문을 한번만 돌기 때문에 시간복잡도는 O(n)
+3) completion배열 끝까지 다 갔는데 조건이 만족하지 않다면, participant의 마지막 인덱스 문자열이 완주하지 못한 것.
+
+<br>
+<br>
+<br>
+
+## 유용한 함수
+* 배열 정렬(알파벳 사전 순서대로): Arrays.sort(participant) 혹은 Arrays.parallelSort(participant)
+
+<br>
+<br>
+<br>
 
 ## 숙지해야할 점
-1) 반복문 내에서의 break와 continue 사용법 숙지. 특히나 DFS 반복문에서 break를 거는 이유는 stack에서 꺼낸 노드의 자식노드로 이동하기 위해서. break를 쓰지 않으면, for문이 계속 돌기 때문에 자식노드가 아닌 인접노드를 stack에 계속 넣음.
+1) 자바에서 제공하는 Arrays.sort()는 내부적으로 Dual-Pivot Quick Sort를 사용.(피봇이 2개!!!!)
+2) 갯수가 적을 때는 sort, 갯수가 많을 때는 parallelSort 사용
+3) 일단 문자열 문제가 나오면, 정렬 여부부터 확인!!!!
 
 <br>
 <br>
