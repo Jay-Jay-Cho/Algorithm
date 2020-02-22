@@ -34,9 +34,27 @@ int k = 6;
 <br>
 
 1) 첫째날부터 k번째날까지 for문으로 돌리면서
+```JAVA
+for(int day=0;day<k;day++)
+```
 2) 만약 해당 날짜에 공급을 받을 수 있다면, Max Heap에 일단 넣는다. (공급 X)
+```JAVA
+if(idx<dates.length && day==dates[idx]) {
+  q.offer(supplies[idx]);
+  idx++;
+}
+```
 3) stock이 0이라면 저장해놓은 Max Heap에서 최댓값을 공급(stock+=q.poll())받고 answer++, 아니라면 그냥 넘어간다.
+```JAVA
+if(stock==0) {
+  answer++;
+  stock+=q.poll();
+}
+```
 4) 하루가 지났으므로, stock--
+```JAVA
+stock--;
+```
 
 
 <br>
