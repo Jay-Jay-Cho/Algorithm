@@ -21,19 +21,30 @@
 ## 접근법
 (실수) 처음에는 굳이 Heap을 써야되나 싶어서, 단순 for문으로 **(stock + supplies[i]) >= k** 구현했다. 즉, 그냥 공급받을 수 있는 밀가루를 0번째부터 다~ 더해서 k보다 커지면 break하도록. 물론 전부 fail......<br>
 왜냐!! 문제에서는 최소 횟수를 구해야했기 때문에, 만약에 위처럼 단순 for문으로 풀면 최소 횟수가 아니기 때문.
+예를들어,
+```JAVA
+int stock = 3;
+int[] dates = {1,2,3,4,5};
+int[] supplies = {1,1,9999,1,1};
+int k = 6;
+```
+라고 하자. <br>
+그냥 for문으로 풀게되면, 1일/2일/3일 모두 공급을 받게되니 return값은 3이된다. 그러나 사실 최소횟수를 구하려면 1일/2일은 공급받지않고, 3일째만 공급을 받아 return값은 1이된다. 즉, Max Heap으로 접근해야 한다는 뜻!!!! 어떻게? 아래처럼.
+<br>
+<br>
 
-2) 배열 길이가 1 or 2일때의 경우를 제외하고,
-3) 첫번째 뽑는 음식이 k 이상일 때까지 반복문 돌리기.
-3-1) 첫번째 뽑은 음식이 k 이상일 때는, 바로 cnt 반환
-3-2) 첫번째 뽑은 음식이 k 미만인데, 더 이상 뽑을 음식이 없을 때 = 더 이상 k이상인 음식을 만들지 못함. -1 반환.
+1) 첫째날부터 k번째날까지 for문으로 돌리면서
+2) 만약 해당 날짜에 공급을 받을 수 있다면, Max Heap에 일단 넣는다. (공급 X)
+3) stock이 0이라면 저장해놓은 Max Heap에서 최댓값을 공급(stock+=q.poll())받고 answer++, 아니라면 그냥 넘어간다.
+4) 하루가 지났으므로, stock--
+
 
 <br>
 <br>
 <br>
 
 ## 유용한 함수 혹은 API
-* Priority Queue: 굳이 collections.sort를 하지 않아도, 기본적으로 Min Heap을 지원하기 때문에 자동으로 오름차순 정렬.
-* 만약 Priority Queue를 내림차순 정렬하고 싶다면, Collections.reverseOrder() 활용.
+* 내림차순 정렬: Collections.reverseOrder()
 ```JAVA
 PriorityQueue<Integer> q = new PriorityQueue<Integer>(Collections.reverseOrder());
 ```
@@ -43,14 +54,18 @@ PriorityQueue<Integer> q = new PriorityQueue<Integer>(Collections.reverseOrder()
 <br>
 
 ## 숙지해야할 점
-1) 문제에서 최댓값 혹은 최솟값을 계속 확인해야 한다면, HashMap 보다는 Heap을 활용하자!!! 왜냐하면, Heap 같은 경우는 기본적으로 큐이기 때문에 offer / poll 메소드를 통해 자동으로 사이즈가 조절되지만, HashMap의 경우 삽입/삭제/탐색이 O(1)이어도 공간복잡도가 안좋기 때문에????
-2) while문이 끝나고 -1을 반환하면 예외케이스가 잡힐 줄 알았는데 아니었음.
+1) stock--를 for문 시작할 때 vs. 끝날 때 고민을 했는데, **끝날 때** 해주는 게 맞다. 왜냐하면, 쓰기도 전에 차감을 해주면 null pointer exception이 뜬다.
+2) i를 기준으로 for문을 돌면서, dates[] 배열의 인덱스는 어떻게 다뤄야하나 고민을 했는데, 조건을 2개 주어줘야 했다.
 ```JAVA
-int first = q.poll();
-if(first >= k) return cnt;
-else if(first < k && q.size()==0) return -1;
+if(idx<dates.length && day==dates[idx]) {
+  q.offer(supplies[idx]);
+  idx++;
+}
 ```
-마지막이 아니라, 첫번째 음식을 뽑을 때마다 체크를 해줬어야함. 왜냐!!! while문의 탈출조건이 !q.isEmpty()이기 때문에, 결과적으로 k 미만이더라도 반복문은 끝나게 되고, -1이 아니라 cnt를 반환하기 때문에 마지막줄 -1로 갈 수 없는거였음...
+즉, dates[idx]가 day임과 동시에, **배열 길이보다 작아야 할것**...!!
+또한, if의 조건문이 2개라면 먼저 명시된 조건이 통과가 돼야 두번째 조건을 비교한다. 
+
+
 <br>
 <br>
 <br>
