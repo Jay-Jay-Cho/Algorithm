@@ -1,8 +1,8 @@
 
 
 ### &#128526;
-[문제 링크](https://www.acmicpc.net/problem/1260)
-[참고 자료](https://mygumi.tistory.com/102)
+[문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42629)
+[참고 자료](https://udud0510.tistory.com/38)
 
 <br>
 <br>
@@ -10,10 +10,8 @@
 
 ## 설명
 
-가장 기본적인 DFS, BFS 문제.
-* DFS = Stack or Recursive
-* BFS = Queue
-
+* Heap, 특히나 PriorityQueue
+* 해외로부터의 밀가루 공급을 최소하하자!!!
 
 <br>
 <br>
