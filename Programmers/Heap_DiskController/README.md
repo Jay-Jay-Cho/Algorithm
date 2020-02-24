@@ -86,26 +86,17 @@ int[][] jobs = {{0, 3},{1, 9},{500, 6}};
 <br>
 
 ## 유용한 함수 혹은 API
-* 내림차순 정렬: Collections.reverseOrder()
-```JAVA
-PriorityQueue<Integer> q = new PriorityQueue<Integer>(Collections.reverseOrder());
-```
+
 
 <br>
 <br>
 <br>
 
 ## 숙지해야할 점
-1) stock--를 for문 시작할 때 vs. 끝날 때 고민을 했는데, **끝날 때** 해주는 게 맞다. 왜냐하면, 쓰기도 전에 차감을 해주면 null pointer exception이 뜬다.
-2) i를 기준으로 for문을 돌면서, dates[] 배열의 인덱스는 어떻게 다뤄야하나 고민을 했는데, 조건을 2개 주어줘야 했다.
-```JAVA
-if(idx<dates.length && day==dates[idx]) {
-  q.offer(supplies[idx]);
-  idx++;
-}
-```
-즉, dates[idx]가 day임과 동시에, **배열 길이보다 작아야 할것**...!!
-또한, if의 조건문이 2개라면 먼저 명시된 조건이 통과가 돼야 두번째 조건을 비교한다. 
+1) 최댓값 혹은 최솟값만을 바로바로 뽑아서 비교할 수 없는 경우에는, 우선순위큐로 정렬한 후에 ArrayList같이 index를 통해 직접적으로 조작할 수 있는 자료구조에 담은 후에 처리한다.
+2) 라면공장문제ㅇ
+
+2) 라면
 
 
 <br>
