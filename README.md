@@ -23,7 +23,14 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 
 ## &#128531; Must Do!!!!!
-* 
+
+* 경우의 수 이해 (조합, 중복조합, 순열, 중복순열)
+
+* 재귀함수
+
+* DFS 백트래킹
+
+
 
 
 <br>
