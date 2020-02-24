@@ -60,11 +60,46 @@ ctrl + shift + space로 매개변수 확인
 <br>
 
 
-## &#128509;알고리즘 구현 연습
+## &#127813; DFS, BFS 
 
-[Union-Find (Disjoing Set) (서로소 집합)](./algorithms/UnionFind)
+[BEAK 1260. DFS&BFS](./Baekjoon/BJ_1260)
 
-[Binary Search (이진 검색)](./algorithms/AL_BinarySearch)
+[Programmers. 타겟넘버](./Programmers/DFS_TargetNumber)
+
+[Programmers. 네트워크](./Programmers/DFS_Network)
+
+[Programmers. 단어변환](./Programmers/BFS_WordConversion)
+
+[Programmers. 여행경로]()
+
+<br>
+<br>
+<br>
+
+## &#127811; 해시(Hash)
+
+[Programmers. 완주하지 못한 선수](./Programmers/Hash_UncompletedPlayer)
+
+[Programmers. 전화번호 목록](./Programmers/Hash_PhoneBook)
+
+[Programmers. 위장](./Programmers/Hash_Camouflage)
+
+[Programmers. 베스트앨범]()
+
+
+<br>
+<br>
+<br>
+
+## &#127817; 힙(Heap)
+
+[Programmers. 더 맵게](./Programmers/Heap_MoreSpicy)
+
+[Programmers. 라면공장](./Programmers/Heap_RamenFactory)
+
+[Programmers. 디스크 컨트롤러](./Programmers/Heap_DiskController)
+
+[Programmers. 이중우선순위큐](./Programmers/Heap_DoublePriorityQueue)
 
 <br>
 <br>
@@ -72,51 +107,11 @@ ctrl + shift + space로 매개변수 확인
 
 ## &#128507;자료구조 구현 연습
 
-[Binary Tree (이진 트리)](./data_structure/DS_BinaryTree)
+[Binary Tree (이진 트리)]
 
 <br>
 <br>
 <br>
-
-
-## &#127813; DFS, BFS (완전탐색)
-
-[BEAK 1260. DFS/BFS](./Baekjoon/BJ_1260)
-
-[Programmers. 타겟넘버](./Programmers/DFS_TargetNumber)
-
-<br>
-<br>
-<br>
-
-## &#127811; 재귀호출 심화
-
-[BAEK 1019. 책 페이지](./BAEK/BAEK_1019)
-
-[BAEK 1914. 하노이 탑](./BAEK/BAEK_1914)
-
-<br>
-
-<br>
-
-<br>
-
-## &#127817; DP
-
-[BAEK 1890. 점프](./BAEK_1890)
-
-[BAEK 9095. 1, 2, 3 더하기](./BAEK_9095)
-
-[algospot. WILDCARD](./solving_strategy/p218_inter_wildcard/p218_inter_wildcard.cpp)
-
-[BAEK 1915. 가장 큰 정사각형](./BAEK/BAEK_1915)
-
-<br>
-
-<br>
-
-<br>
-
 
 
 ## &#127816; Simulation & 구현
