@@ -22,6 +22,14 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 <br>
 
+## &#128531; Must Do!!!!!
+* 
+
+
+<br>
+<br>
+<br>
+
 ## &#128518; 실수 모음
 
 [BFS 중복 카운트 실수](./BAEK_2667#실수한-부분)
@@ -38,21 +46,6 @@ workspace: **Desktop/eclipse_workspace**
 [우선순위 큐 (priority_queue) 활용 방법 및 중복 방지](./technique/#우선순위-큐-활용하기)
 
 [순열조합, 중복순열 표현하기](./technique#순열-조합-구현하기)
-
-
-<br>
-<br>
-<br>
-
-## &#128531; Eclipse 활용
-
-반례 체계적으로 찾기 (예정)
-
-F5 key로 바로 다음 중단점으로 이동하기 (예정)
-
-ctrl + shift + space로 매개변수 확인
-
-도구 - 설정 - 키보드 - 주석 단축키 변경 (Ctrl + /, Ctrl + Shift + /)
 
 
 <br>
