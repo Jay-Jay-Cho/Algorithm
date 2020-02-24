@@ -49,23 +49,23 @@ for(int i=0;i<jobs.length;i++) {
   list.add(q.poll());
 }
 ```
-3) 모든 작업들을 처리할 때까지 처리한다음, 하나씩 제거한다.
+3) list에 있는 모든 작업들을 처리할때까지(처리->제거) 반복한다.
 ```JAVA
 while(!list.isEmpty()) {
 			
-			for(int i=0;i<list.size();i++) {
-				if(time>=list.get(i)[0]) {  //만약 뽑힌 작업의 시작시간이 현재시간(time)보다 이르거나 같다면, 해당 작업을 수행한다
-					int[] temp = list.get(i);
-					int startTime = temp[0];
-					int workTime = temp[1];
-					answer += workTime+time-startTime;  //총 작업시간 업데이트: 누적된 작업시간 + 현재 작업시간 + 기다린 시간(=현재시간-원래 시작시간)
-					time += workTime; //현재시간 업데이트: 현재시간 + 현재 작업시간
-					list.remove(i); //작업 처리가 끝났으므로, 작업을 지운다.
-					break; //작업은 하나씩만 처리하므로, 작업 하나가 끝난 후 break
-				}
-				if(i==list.size()-1) time++;
-			}
+	for(int i=0;i<list.size();i++) {
+		if(time>=list.get(i)[0]) {  //만약 뽑힌 작업의 시작시간이 현재시간(time)보다 이르거나 같다면, 해당 작업을 수행한다
+			int[] temp = list.get(i);
+			int startTime = temp[0];
+			int workTime = temp[1];
+			answer += workTime+time-startTime;  //총 작업시간 업데이트: 누적된 작업시간 + 현재 작업시간 + 기다린 시간(=현재시간-원래 시작시간)
+			time += workTime; //현재시간 업데이트: 현재시간 + 현재 작업시간
+			list.remove(i); //작업 처리가 끝났으므로, 작업을 지운다.
+			break; //작업은 하나씩만 처리하므로, 작업 하나가 끝난 후 break
 		}
+		if(i==list.size()-1) time++;
+	}
+}
 ```
 4) 여기서 가장 이해가 안갔던것은 바로 가장 밑에 있는 코드다.
 ```JAVA
