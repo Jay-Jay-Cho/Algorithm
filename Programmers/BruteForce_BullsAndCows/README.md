@@ -41,15 +41,15 @@ static int getStrike(String check, String num) {
 ```JAVA
 // 볼 판별
 static int getBall(String check, String num) {
-		int cnt = 0;
-		for(int i=0;i<3;i++) {
-      // 숫자들은 포함하지만, 같은 자리는 아닐 때만 cnt++
-			if(check.contains(String.valueOf(num.charAt(i))) && check.charAt(i)!=num.charAt(i)) {
-				cnt++;
-			}
+	int cnt = 0;
+	for(int i=0;i<3;i++) {
+		// 숫자들은 포함하지만, 같은 자리는 아닐 때만 cnt++
+		if(check.contains(String.valueOf(num.charAt(i))) && check.charAt(i)!=num.charAt(i)) {
+			cnt++;
 		}
-		return cnt;
 	}
+	return cnt;
+}
 ```
 
 2) 먼저 후보군이 될 수 있는 숫자들을 모두 생성해놓은 HashMap에 집어넣는다. (굳이 HashMap이 아니라 List도 괜찮을듯?????)
@@ -87,7 +87,7 @@ for(int i=0;i<baseball.length;i++) {
 ```
 
 
-5) 즉, 결과적으로 부합하는 조건의 개수(cnt)가 baseball의 모든 아이템과 조건이 부합하면(==baseball.length) answer++
+5) 즉, 결과적으로 부합하는 조건의 개수(cnt)가 **baseball의 모든 아이템과 조건이 부합할때만!!!**,(==baseball.length) answer++
 ```JAVA
 if(cnt==baseball.length) answer++;
 ```
@@ -98,9 +98,9 @@ if(cnt==baseball.length) answer++;
 <br>
 
 ## 유용한 함수 혹은 API
-* 내림차순 정렬: Collections.reverseOrder()
+* Char 변수를 String 변수로 바꾸는 법: String.valueOf(char a)
 ```JAVA
-PriorityQueue<Integer> q = new PriorityQueue<Integer>(Collections.reverseOrder());
+String.valueOf(num.charAt(i))
 ```
 
 <br>
@@ -108,8 +108,7 @@ PriorityQueue<Integer> q = new PriorityQueue<Integer>(Collections.reverseOrder()
 <br>
 
 ## 숙지해야할 점
-1) stock--를 for문 시작할 때 vs. 끝날 때 고민을 했는데, **끝날 때** 해주는 게 맞다. 왜냐하면, 쓰기도 전에 차감을 해주면 null pointer exception이 뜬다.
-2) i를 기준으로 for문을 돌면서, dates[] 배열의 인덱스는 어떻게 다뤄야하나 고민을 했는데, 조건을 2개 주어줘야 했다.
+1) 
 ```JAVA
 if(idx<dates.length && day==dates[idx]) {
   q.offer(supplies[idx]);
