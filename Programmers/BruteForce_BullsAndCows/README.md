@@ -108,15 +108,8 @@ String.valueOf(num.charAt(i))
 <br>
 
 ## 숙지해야할 점
-1) 
-```JAVA
-if(idx<dates.length && day==dates[idx]) {
-  q.offer(supplies[idx]);
-  idx++;
-}
-```
-즉, dates[idx]가 day임과 동시에, **배열 길이보다 작아야 할것**...!!
-또한, if의 조건문이 2개라면 먼저 명시된 조건이 통과가 돼야 두번째 조건을 비교한다. 
+1) 완전탐색(Brute Force)문제에서는, 조건을 분석하거나 if문으로 세세하게 모든 경우의 수를 판별하기보다는 그냥 간단하게 생각하는 연습을 해야겠다......
+
 
 
 <br>
