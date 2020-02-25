@@ -27,7 +27,8 @@
 
 <br>
 그나마 고민을 좀 했던 것은, answers배열과 각 삼인방의 규칙을 어떻게 비교하나 하는 것이었는데 간단히 **나머지** 함수는 %를 쓰면 됐다...
-```JAVA
+
+```Java
 for(int i=0;i<answers.length;i++){
     int answer = answers[i];
     if(answer==first[i%first.length]) first_score++;
