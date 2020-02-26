@@ -22,19 +22,25 @@
 일단, 이 문제를 시작하려면 순열/조합을 구현해야 했기 때문에 이와 관련한 [공부](https://bcp0109.tistory.com/14)가 필요했음..... 
 
 
-1) 주어진 
+1) 주어진 문자열, 순열트리의 깊이(depth), 몇 개를 뽑을 건지(r)을 입력으로 하는 순열 메소드 작성.
 ```JAVA
-// 스트라이크 판별
-static int getStrike(String check, String num) {
-  int cnt = 0;
-  for(int i=0;i<3;i++) {
-    if(check.charAt(i)==num.charAt(i)) { // 자릿수마다 동일한 숫자인지 체크. (Max = 3)
-      cnt++;
-    }
-  }
-  return cnt;
+static void permutation(String[] arr, int depth, int r) {
+	if(r==depth && !arr[0].equals("0")) {	//depth가 계속 증가해서, 뽑는 갯수(r)와 같아지면 출력.
+		StringBuilder sb = new StringBuilder();
+		for(int i=0;i<r;i++) sb.append(arr[i]);
+		int value = Integer.parseInt(sb.toString());
+		if(!list.contains(value))list.add(value);
+		return;
+	}
+	for(int i=depth;i<arr.length;i++) {
+		swap(arr,depth,i);	// 인덱스가 depth인 아이템과, i인 아이템을 서로 교환. 고정시킨다고 보면 됨.
+		permutation(arr,depth+1,r);	//아이템이 고정된 상태에서, depth+1 후에 다음 재귀단계로 넘어감. 
+		swap(arr,depth,i);	// 백트래킹을 위해, 고정된 아이템을 다시 풂.
+	}
 }
 ```
+여기서 가장 이해가 안됐었던 부분이 바로 마지막 백트래킹을 위한 swap 코드이다. 다시 말하자면 주석에 나와있듯이 swap을 두번 수행함으로써 처음 상태로 되돌린다는 의미로 이해했다. 즉, 만약 **A**BC에서 A는 고정된 상태인 depth 1을 고려해보자. B와 C를 바꾼 이후에(**A**BC --> **AC**B), B와 B를 바꾸려면(물론 값은 바뀌지않지만 알고리즘상) 다시 **A**BC로 돌아가야한다.(**AC**B --> **A**BC --> **AB**C). 트리순회이기때문에, **A**BC를 거치지 않고 **AB**C로 넘어가는 것은 불가능하다. 무조건 백트래킹을 사용해서 이전 단계를 거쳐야 한다.
+
 ```JAVA
 // 볼 판별
 static int getBall(String check, String num) {
@@ -95,7 +101,7 @@ if(cnt==baseball.length) answer++;
 <br>
 
 ## 유용한 함수 혹은 API
-* Char 변수를 String 변수로 바꾸는 법: String.valueOf(char a)
+* StringBuilder
 ```JAVA
 String.valueOf(num.charAt(i))
 ```
