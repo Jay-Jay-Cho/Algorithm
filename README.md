@@ -76,6 +76,20 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 <br>
 
+## &#127819;완전탐색(BruteForce)
+
+[Programmers. 모의고사](./Programmers/BruteForce_MockTest)
+
+[Programmers. 소수 찾기](./Programmers/BruteForce_PrimeNumber)
+
+[Programmers. 숫자 야구](./Programmers/BruteForce_BullsAndCows)
+
+[Programmers. 카펫](./Programmers/BruteFoce_Carpet)
+
+<br>
+<br>
+<br>
+
 ## &#127811; 해시(Hash)
 
 [Programmers. 완주하지 못한 선수](./Programmers/Hash_UncompletedPlayer)
@@ -212,23 +226,7 @@ workspace: **Desktop/eclipse_workspace**
 
 <br>
 
-## &#127819;최소 스패닝 트리 (MST) + Union-Find
 
-[BAEK 1197. 최소 스패닝 트리](./BAEK/BAEK_1197)  (Kruskal 이용) (MST)
-
-[BAEK 4195. 친구 네트워크](./BAEK/BAEK_4195) (endl) 🌟🌟🌟
-
-[BAEK 3780. 네트워크 연결](./BAEK/BAEK_3780) (압축 기법) 🌟🌟
-
-[BAEK 10775. 공항](./BAEK/BAEK_10775)
-
-[BAEK 9938. 방 청소](./BAEK/BAEK_9938) (그래프적 사고) 🌟🌟🌟
-
-<br>
-
-<br>
-
-<br>
 
 ## &#127826; 문자열 처리
 
