@@ -29,6 +29,7 @@ visited[0][0] = true;
 getAnswer(arr,visited,0,0,1);
 ```
 	
+2) 주어진 입력값이 2차원 배열이기 때문에 상/하/좌/우를 이동할 수 있도록 dx[], dy[] 배열을 
 ```JAVA
 // 볼 판별
 static int getBall(String check, String num) {
