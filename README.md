@@ -59,6 +59,18 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 <br>
 
+## &#127821; 백-트래킹(Back-Tracking)
+
+[BAEK 1987. 알파벳](./Baekjoon/BJ_1987_Alphabet)
+
+[BAEK 6603. 로또](./Baekjoon/BJ_6603_Lotto)
+
+[BAEK 9663. N Queen](./Baekjoon/BJ_9663_NQueen)
+
+<br>
+<br>
+<br>
+
 
 ## &#127813; DFS, BFS 
 
