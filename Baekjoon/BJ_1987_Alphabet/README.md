@@ -21,19 +21,14 @@
 (실수) Stack을 통해서 접근을 했었으나, 계속 계속해서 위아래로 오고가야하는 백트래킹 문제에서는 **Stack보다 일반 재귀함수를 활용**하는 편으로 바꿈.<br>
 
 
-1) 일단 특정 기준과 임의의 숫자가 주어졌을 때, 스트라이크 / 볼을 판별할 수 있는 함수를 만든다.
+1) 일단 첫번째 시작점 (arr[0][0])을 방문 & 비교를 위한 list<String>에 추가 후, 재귀를 위한 dfs메소드 호출
 ```JAVA
-// 스트라이크 판별
-static int getStrike(String check, String num) {
-  int cnt = 0;
-  for(int i=0;i<3;i++) {
-    if(check.charAt(i)==num.charAt(i)) { // 자릿수마다 동일한 숫자인지 체크. (Max = 3)
-      cnt++;
-    }
-  }
-  return cnt;
-}
+// main
+list.add(arr[0][0]);
+visited[0][0] = true;
+getAnswer(arr,visited,0,0,1);
 ```
+	
 ```JAVA
 // 볼 판별
 static int getBall(String check, String num) {
