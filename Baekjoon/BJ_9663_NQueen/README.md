@@ -73,34 +73,23 @@ static boolean isPossible(int row) {
 }
 ```
 
-여기서 중요한 것은, 
-  1) comb(arr,visited,**depth**+1,r-1)가 아닌, comb(arr,visited,**i**+1,r-1) 
-  2) 백트래킹은 다른 유사문제들과 마찬가지로, 재귀함수에 들어간 이후에 호출할 것.
-
 <br>
 <br>
 <br>
 
 ## 유용한 함수 혹은 API
-
+1) 2차원 배열상에서 대각선 상의 위치: (x,y)에서 동일한 숫자만큼 증가||감소 
+```java
+Math.abs(col[i]-col[row])==Math.abs(i-row)
+```
 
 <br>
 <br>
 <br>
 
 ## 숙지해야할 점
-1) 순열에서는 재귀함수 안의 parameter가 depth지만, 조합에서는 depth가 아니라 i라는 것을 명심!!!
-```java
-// Permutation
-	if(depth==r) return;
-for Loop
-	permutation(arr,depth+1,r)
-	
-// Combination
-	if(r==0) return;
-for Loop
-	combination(arr,visited,i+1,r-1)
-```
+1) 백트래킹 문제의 대표적인 문제이기하지만, 2차원 배열을 1차원 배열로 바꾼다거나 혹은 main함수에서 직접 for문을 돌려가며 퀸의 위치를 조정하는 것은 구현력보다 창의성이 필요한듯 ㅠㅠㅠㅠㅠ
+
 
 <br>
 <br>
