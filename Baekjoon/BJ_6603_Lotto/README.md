@@ -71,10 +71,18 @@ static void comb(int[] arr, boolean[] visited, int depth, int r) {
 <br>
 
 ## 숙지해야할 점
-1) 순열엣ㄴ
-
-// main에
-// main함수
+1) 순열에서는 재귀함수 안의 parameter가 depth지만, 조합에서는 depth가 아니라 i라는 것을 명심!!!
+```java
+// Permutation
+	if(depth==r) return;
+for Loop
+	permutation(arr,depth+1,r)
+	
+// Combination
+	if(r==0) return;
+for Loop
+	combination(arr,visited,i+1,r-1)
+```
 
 <br>
 <br>
