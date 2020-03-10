@@ -46,13 +46,13 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 
 
-## &#128526; C++ 기법 모음
+## &#128526; DP 
 
-[무한대 표현하기](./technique/#무한대-표현하기)
+[Programmers. 타일 장식물](./Programmers/DP_TileDecoration)
 
-[우선순위 큐 (priority_queue) 활용 방법 및 중복 방지](./technique/#우선순위-큐-활용하기)
+[Programmers. 정수 삼각형](./Programmers/DP_Triangle)
 
-[순열조합, 중복순열 표현하기](./technique#순열-조합-구현하기)
+[Programmers. 등굣길](./Programmers/DP_WayToSchool)
 
 
 <br>
