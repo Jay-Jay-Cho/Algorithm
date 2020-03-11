@@ -54,6 +54,10 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 등굣길](./Programmers/DP_WayToSchool)
 
+[Programmers. 도둑질](./Programmers/DP_Theft)
+
+[Programmers. 서울에서 경산까지](./Programmers/DP_SeoulToGyeongsan)
+
 
 <br>
 <br>
