@@ -45,6 +45,14 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 <br>
 
+## &#127821; 이분탐색
+
+[Programmers. 예산](./Programmers/BinarySearch_Budget)
+
+<br>
+<br>
+<br>
+
 
 ## &#128526; DP
 
@@ -253,26 +261,6 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 9935. 문자열 폭발](./BAEK_9935)
 
 [BAEK 5052. 전화번호 목록](./BAEK/BAEK_5052) (Trie) 🌟
-
-<br>
-
-<br>
-
-<br>
-
-## &#127821; 분할 정복 (이분탐색 등등)
-
-[BAEK 1920. 수찾기](./BAEK/BAEK_1920) (STL \<algorithm\> binary_search() 활용법)
-
-[BAEK 2805. 나무자르기](./BAEK/BAEK_2805) (이분탐색 착안점 중요) 🌟🌟
-
-[BAEK 1654. 랜선자르기](./BAEK/BAEK_1654) (종료조건, 자료형 실수)  🌟🌟🌟
-
-[BAEK 2512. 예산](./BAEK/BAEK_2512)
-
-[BAEK 2104. 부분배열 고르기](./BAEK/BAEK_2104) (엄청 중요)  🌟🌟🌟
-
-[BAEK 10816. 숫자카드](./BAEK/BAEK_10816) (최적화)
 
 <br>
 
