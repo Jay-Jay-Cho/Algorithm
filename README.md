@@ -46,13 +46,15 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 
 
-## &#128526; DP 
+## &#128526; DP
 
 [Programmers. 타일 장식물](./Programmers/DP_TileDecoration)
 
 [Programmers. 정수 삼각형](./Programmers/DP_Triangle)
 
 [Programmers. 등굣길](./Programmers/DP_WayToSchool)
+
+[Programmers. 카드 게임](./Programmers/DP_CardGame)
 
 [Programmers. 도둑질](./Programmers/DP_Theft)
 
@@ -76,7 +78,7 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 
 
-## &#127813; DFS, BFS 
+## &#127813; DFS, BFS
 
 [BEAK 1260. DFS&BFS](./Baekjoon/BJ_1260)
 
