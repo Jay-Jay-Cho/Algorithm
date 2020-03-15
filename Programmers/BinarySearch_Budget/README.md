@@ -21,13 +21,11 @@ class Solution {
 
         int max = budgets[length-1];
         int min = 0;
-        int pre_mid = 0;
         int mid = 0;
-        boolean flag = true;
 
-        while(flag){
+        while(min<=max){
             sum = 0;
-            mid = (int) Math.ceil((max+min)/2);
+            mid = (max+min)/2;
 
             for(int i=0;i<length;i++){
                 if(budgets[i]<mid){
@@ -35,20 +33,14 @@ class Solution {
                 }else
                     sum += mid;
             }
+	        if(sum>M){
+	            max = mid-1;
+	        }else{
+	        	answer = Math.max(answer, mid);
+	            min = mid+1;
+	        }
 
-            if(pre_mid == mid){
-                answer = mid;
-                flag = false;
-            }else{
-                if(sum>M){
-                    max = mid;
-                }else{
-                    min = mid;
-                }
-                pre_mid = mid;
-            }
         }
-
         return answer;
     }
 }
@@ -59,12 +51,52 @@ class Solution {
 * Level : 3
 * Binary Search
 * 주어진 총 예산 내에서 최댓값을 가질 수 있도록 하는 상한액의 최댓값을 찾아라.
-  * 예산(budgets[i]) < 상한액 = 예산(budgets[i])
+  * 예산(budgets[i]) <= 상한액 = 예산(budgets[i])
   * 예산(budgets[i]) > 상한액 = 상한액
 <br><br>
 
+## &#10095;&#10095;&#10095; 이분탐색 풀이법
+#### 1. Objective, 활용가능한 변수를 찾는다.
+#### 2. 반환 기준을 정한다.
+* 조건을 만족하는 값들중에서 최댓값인지 혹은 최솟값인지.
+#### 3. 이분탐색 반복문 로직을 구성한다.
+* min,max,mid 변수
+* 공통 부분
+  ```Java
+  while(min<=max){
 
-## &#10095;&#10095;&#10095; 접근법   
+    if(condition...){
+      // 활용가능한 변수용 조건문(e.g. cnt++, sum++)
+    }
+
+
+    if(condition < limit){
+      max = mid-1;
+    }else{
+      // answer = Math.max 또는 Math.min(answer,mid);
+      min = mid+1;
+    }
+  }
+  ```
+<br><br>
+
+## &#10095;&#10095;&#10095; 접근법  
+
+##### - Logic
+* Objective : 상한액의 최댓값
+* 활용할 수 있는 것 : M
+* 만족하는 조건(sum<=M) 중에서 최댓값을 구하는 것.
+  ```Java
+  if(sum>M){
+    max = mid-1;
+  }else{
+    answer = Math.max(answer,mid);
+    min = mid+1;
+  }
+  ```
+
+
+
 ##### - 처음에는 이분탐색의 개념을 명확히 몰랐기 때문에, 이분탐색에서 제공하는 인덱스 API(`Arrays.binarySearch(arr,value)`)를 활용해서 문제를 풀려고 했다. 그러나 이 경우, 초과 금액을 어떻게 처리할 지에 대한 모호한 점들이 있어 포기했다...
 
 ##### - 그래서 [참고자료](https://iamheesoo.github.io/blog/algo-prog43237)를 활용하여, 이분탐색의 개념자체를 적용하여 문제를 접근했다.
@@ -111,11 +143,11 @@ int pre_mid = 0;
 
 ##### 5. 최적의 상한액을 찾을 때까지 반복문을 진행한다.
 ```java
-while(flag){
+while(mid<=max){
     sum = 0;
 
     // 상한액은 최댓값과 최솟값의 평균.
-    mid = (int) Math.ceil((max+min)/2);
+    mid = (max+min)/2;
 
     // sum 계산.
     for(int i=0;i<length;i++){
@@ -125,18 +157,14 @@ while(flag){
             sum += mid;
     }
 
-    // 기존 상한액과 현재 상한액이 같으면, 즉 최적의 해를 찾으면 반환
-    if(pre_mid == mid){
-        answer = mid;
-        flag = false;
-    }else{    
-        if(sum>M){  // 계산된 총액이 주어진 예산보다 크면,
-            max = mid;  // 최댓값을 현재 상한액으로 갱신하고, 다시 이분탐색  
-        }else{  // 계산된 총액이 주어진 예산보다 작으면,   
-            min = mid; // 최솟값을 현재 상한액으로 갱신하고, 다시 이분탐색  
-        }
-        pre_mid = mid;  // 이전&현재 상한액 비교를 위해 변수에 현재 상한액 저장
+
+    if(sum>M){  // 계산된 총액이 주어진 예산보다 크면,
+        max = mid-1;  // 최댓값을 현재 상한액으로 갱신하고, 다시 이분탐색  
+    }else{  // 계산된 총액이 주어진 예산보다 작으면,
+        answer = Math.max(answer,mid);
+        min = mid+1; // 최솟값을 현재 상한액으로 갱신하고, 다시 이분탐색  
     }
+
 }
 ```
 <br><br>
@@ -145,7 +173,7 @@ while(flag){
 * `Arrays.binarySearch(arr,value)` : value가 index를 반환
   * arr내에 value가 존재할 시 : value의 index반환
   * arr내에 value가 존재하지 않을 시 : -(value의 위치 index) + 1
-
+  * [참고자료](https://code0xff.tistory.com/68)
 
 <br><br>
 
@@ -177,6 +205,11 @@ while(flag){
 * 이분탐색을 쓸 때는 항상 맨 처음에 정렬을 시킨 후에 사용할 것.
 * 이분 탐색을 직관적으로 이해하자!!!!
 ![hhiR6QU](/assets/hhiR6QU_0m8odqmhl.png)
+
+
+
+
+
 
 <br>
 <br>
