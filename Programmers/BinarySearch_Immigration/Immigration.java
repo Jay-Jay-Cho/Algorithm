@@ -5,36 +5,28 @@ import java.util.Arrays;
 public class Immigration {
 	
 	static long solution(int n, int[] times) {
-		long answer = 0;
+		long answer = Long.MAX_VALUE;
 		Arrays.sort(times);
 		int length = times.length;
-		long turn = (long)Math.ceil(n/length+n%length);
-		long max = times[length-1]*turn;
+		long max = (long)times[length-1]*n;
 		long min = 0;
-		long avg = (long)Math.ceil((max+min)/2+(max+min)%2);
+		long mid = (max+min)/2;
 		long sum;
-		long temp_avg = 0;
 		
-		while(true) {
+		while(min<=max) {
 			sum = 0;
-			avg = (long)Math.ceil((max+min)/2+(max+min)%2);
+			mid = (max+min)/2;
 			for(int time:times) {
-				sum+=avg/time;
-			}
-			
-			if(temp_avg==avg) {
-				answer = avg;
-				break;
+				sum+=mid/time;
 			}
 			
 			if(sum<n) {
-				min = avg;
+				min = mid+1;
 			}else {
-				max = avg;
+				answer = Math.min(answer, mid);
+				max = mid-1;
 			}
-			temp_avg = avg;
 		}
-		
 		return answer;
 	}
 	
@@ -42,7 +34,6 @@ public class Immigration {
 		int n = 6;
 		int[] times = {7,10};
 		System.out.println(solution(n,times));
-
 	}
 
 }
