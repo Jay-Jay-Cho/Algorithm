@@ -39,17 +39,17 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#127820; Greedy
 
-[Programmers. 큰 수 만들기](./Programmers/Greedy_MaximumNumber)
+[Programmers. 큰 수 만들기](./Programmers/Greedy/MaximumNumber)
 
 [Programmers. 조이스틱]
 
-[Programmers. 구명보트](./Programmers/Greedy_Lifeboat)
+[Programmers. 구명보트](./Programmers/Greedy/Lifeboat)
 
-[Programmers. 섬 연결하기](./Programmers/Greedy_Island)
+[Programmers. 섬 연결하기](./Programmers/Greedy/Island)
 
-[Programmers. 단속카메라](./Programmers/Greedy_SpeedCamera)
+[Programmers. 단속카메라](./Programmers/Greedy/SpeedCamera)
 
-[Programmers. 저울](./Programmers/Greedy_Scale)
+[Programmers. 저울](./Programmers/Greedy/Scale)
 
 <br>
 
@@ -59,9 +59,9 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#127815; 최단경로 문제
 
-[Programmers. 섬 연결하기](./Programmers/Greedy_Island) : Prim, Kruskal
+[Programmers. 섬 연결하기](./Programmers/Greedy/Island) : Prim, Kruskal
 
-[Programmers. 순위](./Programmers/Graph_Rank) : 플로이드-워셜
+[Programmers. 순위](./Programmers/Graph/Rank) : 플로이드-워셜
 
 다익스트라
 
@@ -75,9 +75,9 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#128518; 그래프
 
-[Programmers. 가장 먼 노드](./Programmers/Graph_FarthestNode) : BFS 탐색
+[Programmers. 가장 먼 노드](./Programmers/Graph/FarthestNode) : BFS 탐색
 
-[Programmers. 순위](./Programmers/Graph_Rank) : 플로이드-워셜
+[Programmers. 순위](./Programmers/Graph/Rank) : 플로이드-워셜
 
 <br>
 <br>
@@ -85,11 +85,11 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#127821; 이분탐색
 
-[Programmers. 예산](./Programmers/BinarySearch_Budget)
+[Programmers. 예산](./Programmers/BinarySearch/Budget)
 
-[Programmers. 입국심사](./Programmers/BinarySearch_Immigration)
+[Programmers. 입국심사](./Programmers/BinarySearch/Immigration)
 
-[Programmers. 징검다리](./Programmers/BinarySearch_SteppingStone)
+[Programmers. 징검다리](./Programmers/BinarySearch/SteppingStone)
 
 <br>
 <br>
@@ -98,17 +98,17 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#128526; DP
 
-[Programmers. 타일 장식물](./Programmers/DP_TileDecoration)
+[Programmers. 타일 장식물](./Programmers/DP/TileDecoration)
 
-[Programmers. 정수 삼각형](./Programmers/DP_Triangle)
+[Programmers. 정수 삼각형](./Programmers/DP/Triangle)
 
-[Programmers. 등굣길](./Programmers/DP_WayToSchool)
+[Programmers. 등굣길](./Programmers/DP/WayToSchool)
 
-[Programmers. 카드 게임](./Programmers/DP_CardGame)
+[Programmers. 카드 게임](./Programmers/DP/CardGame)
 
-[Programmers. 도둑질](./Programmers/DP_Theft)
+[Programmers. 도둑질](./Programmers/DP/Theft)
 
-[Programmers. 서울에서 경산까지](./Programmers/DP_SeoulToGyeongsan)
+[Programmers. 서울에서 경산까지](./Programmers/DP/SeoulToGyeongsan)
 
 
 <br>
@@ -132,13 +132,13 @@ workspace: **Desktop/eclipse_workspace**
 
 [BEAK 1260. DFS&BFS](./Baekjoon/BJ_1260)
 
-[Programmers. 타겟넘버](./Programmers/DFS_TargetNumber)
+[Programmers. 단어변환](./Programmers/BFS/WordConversion)
 
-[Programmers. 네트워크](./Programmers/DFS_Network)
+[Programmers. 타겟 넘버](./Programmers/DFS/TargetNumber)
 
-[Programmers. 단어변환](./Programmers/BFS_WordConversion)
+[Programmers. 네트워크](./Programmers/DFS/Network)
 
-[Programmers. 여행경로]()
+[Programmers. 여행경로](./Programmers/DFS/TravelRoute) (백트래킹)
 
 <br>
 <br>
@@ -146,13 +146,13 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#127819;완전탐색(BruteForce)
 
-[Programmers. 모의고사](./Programmers/BruteForce_MockTest)
+[Programmers. 모의고사](./Programmers/BruteForce/MockTest)
 
-[Programmers. 소수 찾기](./Programmers/BruteForce_PrimeNumber)
+[Programmers. 소수 찾기](./Programmers/BruteForce/PrimeNumber)
 
-[Programmers. 숫자 야구](./Programmers/BruteForce_BullsAndCows)
+[Programmers. 숫자 야구](./Programmers/BruteForce/BullsAndCows)
 
-[Programmers. 카펫](./Programmers/BruteFoce_Carpet)
+[Programmers. 카펫](./Programmers/BruteFoce/Carpet)
 
 <br>
 <br>
@@ -160,11 +160,11 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#127811; 해시(Hash)
 
-[Programmers. 완주하지 못한 선수](./Programmers/Hash_UncompletedPlayer)
+[Programmers. 완주하지 못한 선수](./Programmers/Hash/UncompletedPlayer)
 
-[Programmers. 전화번호 목록](./Programmers/Hash_PhoneBook)
+[Programmers. 전화번호 목록](./Programmers/Hash/PhoneBook)
 
-[Programmers. 위장](./Programmers/Hash_Camouflage)
+[Programmers. 위장](./Programmers/Hash/Camouflage)
 
 [Programmers. 베스트앨범]()
 
@@ -175,13 +175,13 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#127817; 힙(Heap)
 
-[Programmers. 더 맵게](./Programmers/Heap_MoreSpicy)
+[Programmers. 더 맵게](./Programmers/Heap/MoreSpicy)
 
-[Programmers. 라면공장](./Programmers/Heap_RamenFactory)
+[Programmers. 라면공장](./Programmers/Heap/RamenFactory)
 
-[Programmers. 디스크 컨트롤러](./Programmers/Heap_DiskController)
+[Programmers. 디스크 컨트롤러](./Programmers/Heap/DiskController)
 
-[Programmers. 이중우선순위큐](./Programmers/Heap_DoublePriorityQueue)
+[Programmers. 이중우선순위큐](./Programmers/Heap/DoublePriorityQueue)
 
 <br>
 <br>
