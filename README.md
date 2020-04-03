@@ -18,24 +18,53 @@ JDK version: **1.8.0_241**
 
 workspace: **Desktop/eclipse_workspace**
 
-<br>
-<br>
-<br>
-
-## &#128531; Must Do!!!!!
-
-* 경우의 수 이해 (조합, 중복조합, 순열, 중복순열)
-
-* 재귀함수
-
-* DFS 백트래킹
+<br><br><br>
 
 
+## &#127821; Technique
+
+[플로이드-워셜](./Technique/Floyd-Warshall)
+
+[Kruskal](./Technique/Kruskal)
+
+[Prim](./Technique/Prim)
+
+[Union-Bind](./Technique/Trie)
+
+[Trie](./Technique/Trie)
+
+[Combination](./Technique/Combination) : 조합
+
+[Permutation](./Technique/Permutation) : 순열
+
+<br><br><br>
 
 
-<br>
-<br>
-<br>
+## &#127800; [2019 Line](https://chanqun.tistory.com/11?category=898037)
+
+[2019 Line. 숨바꼭질](./2019_Line/ConyAndBrown) : BFS
+
+[BAEK 1697. 숨바꼭질](./2019_Line/BJ_1697_HideAndSeek) : BFS
+
+[BAEK 1931. 회의실 배정](./2019_Line/BJ_1931_MeetingRoom) : Greedy
+
+[BAEK 2493. 탑](./2019_Line/BJ_2493_Tower) : Stack
+
+<br><br><br>
+
+
+## &#127816; Simulation & 구현
+
+[2020 Kakao. 문자열 압축](./2020_Kakao/StringCompression)
+
+[2020 Kakao. 괄호 변환](./2020_Kakao/BracketConversion)
+
+[2020 Kakao. 자물쇠와 열쇠](./2020_Kakao/LockandKey)
+
+[2020 Kakao. 가사 검색](./2020_Kakao/LyricsSearching)
+
+<br><br><br>
+
 
 ## &#127820; Greedy
 
@@ -51,11 +80,10 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 저울](./Programmers/Greedy/Scale)
 
-<br>
+[BAEK 1931. 회의실 배정](./2019_Line/BJ_1931_MeetingRoom)
 
-<br>
+<br><br><br>
 
-<br>
 
 ## &#127815; 최단경로 문제
 
@@ -67,11 +95,8 @@ workspace: **Desktop/eclipse_workspace**
 
 벨만-포드
 
-<br>
+<br><br><br>
 
-<br>
-
-<br>
 
 ## &#128518; 그래프
 
@@ -79,9 +104,7 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 순위](./Programmers/Graph/Rank) : 플로이드-워셜
 
-<br>
-<br>
-<br>
+<br><br><br>
 
 ## &#127821; 이분탐색
 
@@ -91,9 +114,7 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 징검다리](./Programmers/BinarySearch/SteppingStone)
 
-<br>
-<br>
-<br>
+<br><br><br>
 
 
 ## &#128526; DP
@@ -111,9 +132,7 @@ workspace: **Desktop/eclipse_workspace**
 [Programmers. 서울에서 경산까지](./Programmers/DP/SeoulToGyeongsan)
 
 
-<br>
-<br>
-<br>
+<br><br><br>
 
 ## &#127821; 백-트래킹(Back-Tracking)
 
@@ -123,14 +142,12 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 9663. N Queen](./Baekjoon/BJ_9663_NQueen)
 
-<br>
-<br>
-<br>
+<br><br><br>
 
 
 ## &#127813; DFS, BFS
 
-[BEAK 1260. DFS&BFS](./Baekjoon/BJ_1260)
+[BAEK 1260. DFS&BFS](./Baekjoon/BJ_1260)
 
 [Programmers. 단어변환](./Programmers/BFS/WordConversion)
 
@@ -140,9 +157,11 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 여행경로](./Programmers/DFS/TravelRoute) (백트래킹)
 
-<br>
-<br>
-<br>
+[2019 Line. 숨바꼭질](./2019_Line/ConyAndBrown)
+
+[BAEK 1697. 숨바꼭질](./2019_Line/BJ_1697_HideAndSeek)
+
+<br><br><br>
 
 ## &#127819;완전탐색(BruteForce)
 
@@ -154,9 +173,7 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 카펫](./Programmers/BruteFoce/Carpet)
 
-<br>
-<br>
-<br>
+<br><br><br>
 
 ## &#127811; 해시(Hash)
 
@@ -168,10 +185,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 베스트앨범]()
 
+<br><br><br>
 
-<br>
-<br>
-<br>
 
 ## &#127817; 힙(Heap)
 
@@ -183,9 +198,24 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 이중우선순위큐](./Programmers/Heap/DoublePriorityQueue)
 
-<br>
-<br>
-<br>
+[BAEK 9663. 탑](./2019_Line/BJ_2493_Tower) : Stack 으로 대체 가능
+
+<br><br><br>
+
+
+## &#127818; 스택 & 큐
+
+[Programmers. 다리를 지나는 트럭](./Programmers/Stack&Queue/PassingTruck)
+
+[Programmers. 기능개발](./Programmers/Stack&Queue/FunctionDevelopment)
+
+[Programmers. 프린터](./Programmers/Stack&Queue/Printer)
+
+[Programmers. 쇠막대기](./Programmers/Stack&Queue/IronBar)
+
+[Programmers. 주식가격](./Programmers/Stack&Queue/StockPrice)
+
+<br><br><br>
 
 ## &#128507;자료구조 구현 연습
 
@@ -194,79 +224,6 @@ workspace: **Desktop/eclipse_workspace**
 <br>
 <br>
 <br>
-
-
-## &#127816; Simulation & 구현
-
-[BAEK 3190. 뱀](./BAEK_3190)
-
-[SWEA 5650. 핀볼 게임](./SWEA/SWEA_5650)
-
-[SWEA 5644. 무선 충전](./SWEA/SWEA_5644)
-
-[SWEA 5648. 원자소멸 시뮬레이션](./SWEA/SWEA_5648)
-
-[SWEA 2382. 미생물 격리](./SWEA/SWEA_2382)
-
-[SWEA 4012. 요리사](./SWEA/SWEA_4012) (순열 조합)
-
-[SWEA 2115. 벌꿀채취](./SWEA/SWEA_2115)
-
-[SWEA 2477. 차량 정비소](./SWEA/SWEA_2477)
-
-[SWEA 5653. 줄기세포 배양](./SWEA/SWEA_5653) (동시성 우선순위 문제 해결이 관건)
-
-[SWEA 4014. 활주로 건설](./SWEA/SWEA_4014)
-
-[SWEA 4013. 특이한 자석](./SWEA/SWEA_4013) (상태 저장 후 한꺼번에 변화)
-
-[SWEA 2383. 점심 식사시간](./SWEA/SWEA_2383) (2^n 순열조합 next_permutation()으로 결정하기)
-
-[BAEK 14499. 주사위 굴리기](./BAEK/BAEK_14499)
-
-[BAEK 16236. 아기상어](./BAEK/BAEK_16236) (실수 와장창) 🌟
-
-[BAEK 15685. 드래곤 커브](./BAEK/BAEK_15685) (규칙 찾아내기) 🌟
-
-[BAEK 15683. 감시 카메라](./BAEK/BAEK_15683) (순열 조합)
-
-[BAEK 14503. 로봇 청소기](./BAEK/BAEK_14503)
-
-[BAEK 14889. 스타트 링크](./BAEK/BAEK_14889) (SWEA 4012와 똑같은 유형)
-
-[BAEK 16234. 인구이동](./BAEK/BAEK_16234)
-
-[BAEK 5373. 큐빙](./BAEK/BAEK_5373) 🌟🌟
-
-[BAEK 16235. 나무 재테크](./BAEK/BAEK_16235)
-
-[BAEK 2468. 안전 영역](./BAEK/BAEK_2468)
-
-[BAEK 17144. 안녕! 미세먼지](./BAEK/BAEK_17144)
-
-[BAEK 17281. ⚾](./BAEK/BAEK_17281)
-
-<br>
-
-<br>
-
-<br>
-
-
-## &#127821; 위상정렬
-
-[BAEK 1516. 게임개발](./BAEK_1516)
-
-<br>
-
-<br>
-
-<br>
-
-
-
-
-
 
 
 ## &#127826; 문자열 처리

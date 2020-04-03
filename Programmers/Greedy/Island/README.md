@@ -1,6 +1,6 @@
 
 
-# [구명보트](https://programmers.co.kr/learn/courses/30/lessons/42861)
+# [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861)
 * **참고자료** : Prim - https://readystory.tistory.com/91
 * **참고자료** : Kruskal - https://woongsin94.tistory.com/184
 * **참고자료** : Union-Find - https://ssungkang.tistory.com/entry/Algorithm-%EC%9C%A0%EB%8B%88%EC%98%A8-%ED%8C%8C%EC%9D%B8%EB%93%9CUnion-Find
