@@ -12,6 +12,7 @@
 * Level: 3
 * BFS
 * words 배열안의 단어변환을 통해 begin에서 target으로 치환
+* words 배열 단어들의 순서는 상관없이...
 
 
 <br>

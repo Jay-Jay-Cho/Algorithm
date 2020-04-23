@@ -27,6 +27,16 @@ Character.isDigit(c); // 숫자
 ```
 <br><br>
 
+## &#10095;&#10095;&#10095; 접두사/접미사 확인
+```java
+String str1;
+String str2;
+
+str1.startsWith(str2);
+str1.endsWith(str2);
+```
+<br><br>
+
 
 
 ## &#10095;&#10095;&#10095; Iterator

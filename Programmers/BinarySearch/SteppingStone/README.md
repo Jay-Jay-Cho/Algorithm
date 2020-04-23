@@ -106,7 +106,7 @@ while(min<=max){
     mid = (max+min)/2;
     for(int rock:new_rocks){
         if(rock+temp<mid){
-            cnt++;
+            cnt++; // 제거 
             temp += rock;
         }else{
             temp = 0;

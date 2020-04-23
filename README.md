@@ -40,6 +40,15 @@ workspace: **Desktop/eclipse_workspace**
 <br><br><br>
 
 
+## &#127801; [삼성 기출](https://www.acmicpc.net/workbook/view/1152)
+
+[BAEK 17825. 주사위 윷놀이](./Samsung/BJ_17825_Yoot) : DFS(백트래킹), 시뮬레이션
+
+[BAEK 17822. 원판 돌리기](./Samsung/BJ_17822_Disk) : 시뮬레이션
+
+<br><br><br>
+
+
 ## &#127800; [2019 Line](https://chanqun.tistory.com/11?category=898037)
 
 [2019 Line. 숨바꼭질](./2019_Line/ConyAndBrown) : BFS
@@ -53,7 +62,7 @@ workspace: **Desktop/eclipse_workspace**
 <br><br><br>
 
 
-## &#127816; Simulation & 구현
+## &#127816; Simulation
 
 [2020 Kakao. 문자열 압축](./2020_Kakao/StringCompression)
 
@@ -62,6 +71,10 @@ workspace: **Desktop/eclipse_workspace**
 [2020 Kakao. 자물쇠와 열쇠](./2020_Kakao/LockandKey)
 
 [2020 Kakao. 가사 검색](./2020_Kakao/LyricsSearching)
+
+[BAEK 17825. 주사위 윷놀이](./Samsung/BJ_17825_Yoot) : DFS(백트래킹), 시뮬레이션
+
+[BAEK 17822. 원판 돌리기](./Samsung/BJ_17822_Disk) : 시뮬레이션
 
 <br><br><br>
 
@@ -141,6 +154,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 6603. 로또](./Baekjoon/BJ_6603_Lotto)
 
 [BAEK 9663. N Queen](./Baekjoon/BJ_9663_NQueen)
+
+[BAEK 17825. 주사위 윷놀이](./Samsung/BJ_17825_Yoot) : DFS(백트래킹), 시뮬레이션
 
 <br><br><br>
 
