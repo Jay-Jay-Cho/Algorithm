@@ -46,6 +46,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 17822. 원판 돌리기](./Samsung/BJ_17822_Disk) : 시뮬레이션
 
+[BAEK 17837. 새로운 게임 2](./Samsung/BJ_17837_NewGame2) : 시뮬레이션
+
 <br><br><br>
 
 
@@ -75,6 +77,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 17825. 주사위 윷놀이](./Samsung/BJ_17825_Yoot) : DFS(백트래킹), 시뮬레이션
 
 [BAEK 17822. 원판 돌리기](./Samsung/BJ_17822_Disk) : 시뮬레이션
+
+[BAEK 17837. 새로운 게임 2](./Samsung/BJ_17837_NewGame2) : 시뮬레이션
 
 <br><br><br>
 
