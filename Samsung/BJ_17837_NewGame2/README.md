@@ -1,5 +1,5 @@
-# [주사위 윷놀이](https://www.acmicpc.net/problem/17825)
-* **참고자료** : https://velog.io/@hyeon930/BOJ-17825-%EC%A3%BC%EC%82%AC%EC%9C%84-%EC%9C%B7%EB%86%80%EC%9D%B4-Java
+# [새로운 게임 2](https://www.acmicpc.net/problem/17837)
+* **참고자료** : 엄슴.
 
 <br>
 
