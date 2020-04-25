@@ -50,6 +50,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 17779. 게리맨더링 2](./Samsung/BJ_17779_Gerrymandering2) : 시뮬레이션
 
+[BAEK 17142. 연구소 3](./Samsung/BJ_17142_Lab3) : DFS(조합), BFS, 시뮬레이션
+
 <br><br><br>
 
 
@@ -83,6 +85,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 17837. 새로운 게임 2](./Samsung/BJ_17837_NewGame2) : 시뮬레이션
 
 [BAEK 17779. 게리맨더링 2](./Samsung/BJ_17779_Gerrymandering2) : 시뮬레이션
+
+[BAEK 17142. 연구소 3](./Samsung/BJ_17142_Lab3) : DFS(조합), BFS, 시뮬레이션
 
 <br><br><br>
 
@@ -165,6 +169,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 17825. 주사위 윷놀이](./Samsung/BJ_17825_Yoot) : DFS(백트래킹), 시뮬레이션
 
+[BAEK 17142. 연구소 3](./Samsung/BJ_17142_Lab3) : DFS(조합), BFS, 시뮬레이션
+
 <br><br><br>
 
 
@@ -183,6 +189,8 @@ workspace: **Desktop/eclipse_workspace**
 [2019 Line. 숨바꼭질](./2019_Line/ConyAndBrown)
 
 [BAEK 1697. 숨바꼭질](./2019_Line/BJ_1697_HideAndSeek)
+
+[BAEK 17142. 연구소 3](./Samsung/BJ_17142_Lab3) : DFS(조합), BFS, 시뮬레이션
 
 <br><br><br>
 
