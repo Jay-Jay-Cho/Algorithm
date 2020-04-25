@@ -48,6 +48,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 17837. 새로운 게임 2](./Samsung/BJ_17837_NewGame2) : 시뮬레이션
 
+[BAEK 17779. 게리맨더링 2](./Samsung/BJ_17779_Gerrymandering2) : 시뮬레이션
+
 <br><br><br>
 
 
@@ -79,6 +81,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 17822. 원판 돌리기](./Samsung/BJ_17822_Disk) : 시뮬레이션
 
 [BAEK 17837. 새로운 게임 2](./Samsung/BJ_17837_NewGame2) : 시뮬레이션
+
+[BAEK 17779. 게리맨더링 2](./Samsung/BJ_17779_Gerrymandering2) : 시뮬레이션
 
 <br><br><br>
 
