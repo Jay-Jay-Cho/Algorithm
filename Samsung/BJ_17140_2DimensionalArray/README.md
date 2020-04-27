@@ -8,166 +8,188 @@
 package samsung;
 import java.io.*;
 import java.util.*;
-public class BJ_17142_Lab3 {
+public class BJ_17140_2DimensionalArray {
 
-	static class Pos{
-		int x;
-		int y;
-		Pos(int x,int y){
-			this.x = x;
-			this.y = y;
+	static class Node{
+		int num;
+		int cnt;
+		Node(int num, int cnt){
+			this.num = num;
+			this.cnt = cnt;
 		}
 	}
 
-	static int N, M;
+	static int r,c,k;
 	static int[][] map;
-	static ArrayList<Pos> list;
-	static int[] sub_virus;
-	static Stack<String> stack;
-	static int[] cnt_arr = new int[4];
-	static int cnt_sum = 0;
-	static int answer = Integer.MAX_VALUE;
-	static int[] move_x = {-1,0,1,0};
-	static int[] move_y = {0,1,0,-1};
+	static int[][] result_map;
+	static int time = 0;
+	static boolean flag = true;
+	static int row_cnt = 3;
+	static int col_cnt = 3;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String[] first_line = br.readLine().split(" ");
-		N = Integer.parseInt(first_line[0]);
-		map = new int[N][N];
-		M = Integer.parseInt(first_line[1]);
-		list = new ArrayList<Pos>();
-
-
-
-		for(int i=0;i<N;i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			for(int j=0;j<N;j++) {
-				int value = Integer.parseInt(st.nextToken());
-				map[i][j] = value;
-				cnt_arr[value]++;
-				if(value==2) list.add(new Pos(i,j));
-			}
-		}
-
-		// Exceptional Case = no virus
+		StringTokenizer st1 = new StringTokenizer(br.readLine());
+		map = new int[3][3];
 		for(int i=0;i<3;i++) {
-			cnt_sum+=cnt_arr[i];
+			if(i==0) r=Integer.parseInt(st1.nextToken())-1;
+			else if(i==1) c=Integer.parseInt(st1.nextToken())-1;
+			else k=Integer.parseInt(st1.nextToken());
 		}
-		if(cnt_sum == cnt_arr[0] || cnt_sum == cnt_arr[1]) {
-			answer = -2;
-		}
-
-		int size = list.size();
-		sub_virus = new int[size];
-		boolean[] used = new boolean[size];
-		for(int i=0;i<size;i++) sub_virus[i]=i;
-		stack = new Stack<String>();
-		combination(sub_virus,used,0,M);
-
-		while(!stack.isEmpty() && answer!=-2) { //mistake
-			int empty_cnt = cnt_arr[0];
-			String initial_virus = stack.pop();
-
-			// copy the map
-			int[][] copy_map = new int[N][N];
-			for(int i=0;i<N;i++) {
-				copy_map[i] = map[i].clone();
-			}
-			boolean[][] visited = new boolean[N][N];
-			for(int i=0;i<N;i++) {
-				Arrays.fill(visited[i],false);
-			}
-
-			Queue<Pos> q = new LinkedList<Pos>();
-
-			boolean flag = true;
-			int time = 1;
-			while(flag) {
-				boolean change = false; // mistake
-				if(time==1) {
-					for(int idx=0;idx<M;idx++) {
-						Pos pos = list.get(initial_virus.charAt(idx)-'0');
-						int x = pos.x;
-						int y = pos.y;
-						visited[x][y] = true;
-						for(int i=0;i<4;i++) {
-							int dx = x+move_x[i];
-							int dy = y+move_y[i];
-							if(dx>=0 && dx<N && dy>=0 && dy<N && copy_map[dx][dy]!=1 && !visited[dx][dy]) {
-								if(copy_map[dx][dy]==0) {
-									empty_cnt--;
-									q.offer(new Pos(dx,dy));
-									copy_map[dx][dy] = 2;
-								}else {
-									q.offer(new Pos(dx,dy));
-								}
-								change = true;
-								visited[dx][dy] = true;
-							}
-						}
-					}
-				}else {
-					int q_size = q.size();
-					for(int k=0;k<q_size;k++) {
-						Pos pos = q.poll();
-						int x = pos.x;
-						int y = pos.y;
-						for(int i=0;i<4;i++) {
-							int dx = x+move_x[i];
-							int dy = y+move_y[i];
-							if(dx>=0 && dx<N && dy>=0 && dy<N && copy_map[dx][dy]!=1 && !visited[dx][dy]) {
-								if(copy_map[dx][dy]==0) {
-									empty_cnt--;
-									q.offer(new Pos(dx,dy));
-									copy_map[dx][dy] = 2;
-								}else {
-									q.offer(new Pos(dx,dy));
-								}
-								visited[dx][dy] = true;
-								change = true;
-							}
-						}
-						//q.offer(pos); -----> 시간초과 원흉  
-					}
-				}
-				if(time>=answer) flag=false;
-				if(empty_cnt<=0) {
-					if(time==1 && cnt_arr[0]==0) {
-						answer = 0; //mistake
-					}
-					else answer =  Math.min(answer, time);
-					flag = false;
-				}
-				if(!change) {
-					flag = false;
-				}
-				time++;
+		for(int i=0;i<3;i++) {
+			StringTokenizer st2 = new StringTokenizer(br.readLine());
+			for(int j=0;j<3;j++) {
+				map[i][j] = Integer.parseInt(st2.nextToken());
+				if(r<=2 && c<=2 && map[r][c] == k) flag=false;	// exception
 			}
 		}
-		if(answer == Integer.MAX_VALUE) answer = -1;
-		System.out.println(answer);
+
+		while(flag && time<=100) {
+			time++;
+
+			// R operation
+			if(row_cnt >= col_cnt) {
+				if(time==1) operation(true,map);
+				else operation(true,result_map);
+			}
+
+			// C operation
+			else {
+				//result_map = operation(false,map);
+				operation(false,result_map);
+			}
+
+			if(r<=row_cnt-1 && c<=col_cnt-1 && result_map[r][c]==k) {
+				flag = false; // exception
+			}
+		}
+
+		// could not find
+		if(flag == true) time=-1;
+
+		System.out.println(time);
 	}
 
-	static void combination(int[] arr, boolean[] visited, int depth, int r) {
-		if(r==0) {
-			StringBuilder sb = new StringBuilder();
-			for(int i=0;i<arr.length;i++) {
-				if(visited[i]) {
-					sb.append(arr[i]);
+	// should not count the zero(0)
+
+	static void operation(boolean isR, int[][] map) {
+		PriorityQueue<Node> priority_q = new PriorityQueue<Node>(new Comparator<Node>() {
+			@Override
+			public int compare(Node node1, Node node2) {
+				if(node1.cnt < node2.cnt) return -1;
+				else if(node1.cnt == node2.cnt) {
+					if(node1.num <= node2.num) return -1;
+					else return 1;
+				}else return 1;
+			}
+
+		});
+		HashMap<Integer,Integer> hashmap;
+		Queue<int[]> q;
+		if(isR) {
+			q = new LinkedList<int[]>();
+			int R_cnt = row_cnt;
+			int max_col_cnt = Integer.MIN_VALUE;
+			for(int i=0;i<R_cnt;i++) {
+				hashmap = new HashMap<Integer,Integer>();
+				for(int num:map[i]) {
+					if(num==0) continue;
+					if(hashmap.containsKey(num)) {
+						int previous_value = hashmap.get(num);
+						hashmap.replace(num, previous_value+1);
+					}else {
+						hashmap.put(num, 1);
+					}
+				}
+				Iterator<Integer> iter = hashmap.keySet().iterator();
+				while(iter.hasNext()) {
+					if(priority_q.size() > 50) {
+						break;
+					}
+					int num = (int) iter.next();
+					int cnt = hashmap.get(num);
+					priority_q.offer(new Node(num,cnt));
+				}
+				max_col_cnt = Math.max(priority_q.size()*2, max_col_cnt);
+				int new_arr_length = priority_q.size()*2;
+				int[] new_arr = new int[new_arr_length];
+				int idx = 0;
+				while(!priority_q.isEmpty()) {
+					Node node = priority_q.poll();
+					new_arr[idx] = node.num;
+					idx++;
+					new_arr[idx] = node.cnt;
+					idx++;
+				}
+				q.offer(new_arr);
+				//max_col_cnt = Math.max(priority_q.size()*2, max_col_cnt); //location
+
+			}
+			col_cnt = max_col_cnt;
+			result_map = new int[row_cnt][col_cnt];
+			for(int row=0;row<row_cnt;row++) {
+				int[] temp_arr = q.poll();
+				for(int col=0;col<temp_arr.length;col++) {
+					result_map[row][col] = temp_arr[col];
+				}
+				//result_map[row] = temp_arr.clone();
+			}
+		}else {
+			q = new LinkedList<int[]>();
+			int C_cnt = col_cnt;
+			int max_row_cnt = Integer.MIN_VALUE;
+			for(int i=0;i<C_cnt;i++) {
+				hashmap = new HashMap<Integer,Integer>();
+
+				for(int row=0;row<row_cnt;row++) {
+					int num = map[row][i];
+					if(num==0) continue;
+					if(hashmap.containsKey(num)) {
+						int previous_value = hashmap.get(num);
+						hashmap.replace(num, previous_value+1);
+					}else {
+						hashmap.put(num, 1);
+					}
+				}
+
+				Iterator<Integer> iter = hashmap.keySet().iterator();
+				while(iter.hasNext()) {
+					if(priority_q.size() > 50) {
+						break;
+					}
+					int num = (int) iter.next();
+					int cnt = hashmap.get(num);
+					priority_q.offer(new Node(num,cnt));
+				}
+
+				max_row_cnt = Math.max(priority_q.size()*2, max_row_cnt);
+				int new_arr_length = priority_q.size()*2;
+				int[] new_arr = new int[new_arr_length];
+				int idx = 0;
+				while(!priority_q.isEmpty()) {
+					Node node = priority_q.poll();
+					new_arr[idx] = node.num;
+					idx++;
+					new_arr[idx] = node.cnt;
+					idx++;
+				}
+				q.offer(new_arr);
+				//max_row_cnt = Math.max(priority_q.size()*2, max_row_cnt);
+			}
+			row_cnt = max_row_cnt;
+			result_map = new int[row_cnt][col_cnt];
+			for(int col=0;col<col_cnt;col++) {
+				int[] temp_arr = q.poll();
+				for(int row=0;row<temp_arr.length;row++) {
+					result_map[row][col] = temp_arr[row];
 				}
 			}
-			stack.push(sb.toString());
-			return;
 		}
-
-		for(int i=depth;i<arr.length;i++) {
-			visited[i] = true;
-			combination(arr,visited,i+1,r-1);
-			visited[i] = false; // backtracking
-		}
+		//return result_map;
 	}
+
 }
+
 ```
 <br><br>
 
