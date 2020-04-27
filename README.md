@@ -52,6 +52,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 17142. 연구소 3](./Samsung/BJ_17142_Lab3) : DFS(조합), BFS, 시뮬레이션
 
+[BAEK 17140. 이차원 배열과 연산](./Samsung/BJ_17140_2DimensionalArray) : 시뮬레이션
+
 <br><br><br>
 
 
@@ -87,6 +89,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 17779. 게리맨더링 2](./Samsung/BJ_17779_Gerrymandering2) : 시뮬레이션
 
 [BAEK 17142. 연구소 3](./Samsung/BJ_17142_Lab3) : DFS(조합), BFS, 시뮬레이션
+
+[BAEK 17140. 이차원 배열과 연산](./Samsung/BJ_17140_2DimensionalArray) : 시뮬레이션
 
 <br><br><br>
 

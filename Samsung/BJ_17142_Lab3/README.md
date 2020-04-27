@@ -7,7 +7,6 @@
 ## &#10095;&#10095;&#10095; 전체 코드
 ```java
 package samsung;
-package samsung;
 import java.io.*;
 import java.util.*;
 public class BJ_17142_Lab3 {
