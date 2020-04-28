@@ -56,6 +56,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 17143. 낚시왕](./Samsung/BJ_17143_FisherKing) : 시뮬레이션
 
+[BAEK 17144. 미세먼지 안녕!](./Samsung/BJ_17144_ByeByeDust) : 시뮬레이션
+
 <br><br><br>
 
 
@@ -95,6 +97,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 17140. 이차원 배열과 연산](./Samsung/BJ_17140_2DimensionalArray) : 시뮬레이션
 
 [BAEK 17143. 낚시왕](./Samsung/BJ_17143_FisherKing) : 시뮬레이션
+
+[BAEK 17144. 미세먼지 안녕!](./Samsung/BJ_17144_ByeByeDust) : 시뮬레이션
 
 <br><br><br>
 
