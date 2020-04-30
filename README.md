@@ -58,6 +58,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 17144. 미세먼지 안녕!](./Samsung/BJ_17144_ByeByeDust) : 시뮬레이션
 
+[BAEK 16236. 아기 상어](./Samsung/BJ_16236_BabyShark) : BFS, 시뮬레이션
+
 <br><br><br>
 
 
@@ -99,6 +101,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 17143. 낚시왕](./Samsung/BJ_17143_FisherKing) : 시뮬레이션
 
 [BAEK 17144. 미세먼지 안녕!](./Samsung/BJ_17144_ByeByeDust) : 시뮬레이션
+
+[BAEK 16236. 아기 상어](./Samsung/BJ_16236_BabyShark) : BFS, 시뮬레이션
 
 <br><br><br>
 
@@ -203,6 +207,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 1697. 숨바꼭질](./2019_Line/BJ_1697_HideAndSeek)
 
 [BAEK 17142. 연구소 3](./Samsung/BJ_17142_Lab3) : DFS(조합), BFS, 시뮬레이션
+
+[BAEK 16236. 아기 상어](./Samsung/BJ_16236_BabyShark) : BFS, 시뮬레이션
 
 <br><br><br>
 
