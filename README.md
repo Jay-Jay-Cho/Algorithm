@@ -20,6 +20,16 @@ workspace: **Desktop/eclipse_workspace**
 
 <br><br><br>
 
+## &#128507; To-Do
+
+[자료구조 직접 구현]
+
+[비트연산으로 조합 구하기]
+
+<br>
+<br>
+<br>
+
 
 ## &#127821; Technique
 
@@ -39,6 +49,24 @@ workspace: **Desktop/eclipse_workspace**
 
 <br><br><br>
 
+## &#127807; 카카오
+
+[Kakao 2020 Blind. 문자열 압축](./Kakao/2020_Blind/StringCompression)
+
+[Kakao 2020 Blind. 괄호 변환](./Kakao/2020_Blind/BracketConversion)
+
+[Kakao 2020 Blind. 자물쇠와 열쇠](./Kakao/2020_Blind/LockandKey)
+
+[Kakao 2020 Blind. 가사 검색](./Kakao/2020_Blind/LyricsSearching)
+
+[Kakao 2019 Blind. 오픈채팅방](./Kakao/2019_Blind/OpenChat)
+
+[Kakao 2019 Blind. 실패율](./Kakao/2019_Blind/FailureRate)
+
+[Kakao 2019 Blind. 후보키](./Kakao/2019_Blind/CandidateKey)
+
+
+<br><br><br>
 
 ## &#127801; [삼성 기출](https://www.acmicpc.net/workbook/view/1152)
 
@@ -80,13 +108,13 @@ workspace: **Desktop/eclipse_workspace**
 
 ## &#127816; Simulation
 
-[2020 Kakao. 문자열 압축](./2020_Kakao/StringCompression)
+[Kakao 2020 Blind. 문자열 압축](./Kakao/2020_Blind/StringCompression)
 
-[2020 Kakao. 괄호 변환](./2020_Kakao/BracketConversion)
+[Kakao 2020 Blind. 괄호 변환](./Kakao/2020_Blind/BracketConversion)
 
-[2020 Kakao. 자물쇠와 열쇠](./2020_Kakao/LockandKey)
+[Kakao 2020 Blind. 자물쇠와 열쇠](./Kakao/2020_Blind/LockandKey)
 
-[2020 Kakao. 가사 검색](./2020_Kakao/LyricsSearching)
+[Kakao 2020 Blind. 가사 검색](./Kakao/2020_Blind/LyricsSearching)
 
 [BAEK 17825. 주사위 윷놀이](./Samsung/BJ_17825_Yoot) : DFS(백트래킹), 시뮬레이션
 
@@ -269,26 +297,3 @@ workspace: **Desktop/eclipse_workspace**
 [Programmers. 주식가격](./Programmers/Stack&Queue/StockPrice)
 
 <br><br><br>
-
-## &#128507;자료구조 구현 연습
-
-[Binary Tree (이진 트리)]
-
-<br>
-<br>
-<br>
-
-
-## &#127826; 문자열 처리
-
-[BAEK 3613. Java vs C++](./BAEK_3613)
-
-[BAEK 9935. 문자열 폭발](./BAEK_9935)
-
-[BAEK 5052. 전화번호 목록](./BAEK/BAEK_5052) (Trie) 🌟
-
-<br>
-
-<br>
-
-<br>
