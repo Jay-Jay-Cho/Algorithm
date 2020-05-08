@@ -65,6 +65,15 @@ workspace: **Desktop/eclipse_workspace**
 
 [Kakao 2019 Blind. 후보키](./Kakao/2019_Blind/CandidateKey)
 
+[Kakao 2019 인턴. 크레인 인형뽑기 게임](./Kakao/2019_Intern/ClawMachineGame)
+
+[Kakao 2019 인턴. 튜플](./Kakao/2019_Intern/Tuple)
+
+[Kakao 2019 인턴. 불량 사용자](./Kakao/2019_Intern/BadUser)
+
+[Kakao 2019 인턴. 호텔 방 배정](./Kakao/2019_Intern/HotelRoom)
+
+[Kakao 2019 인턴. 징검다리 건너기](./Kakao/2019_Intern/SteppingStone)
 
 <br><br><br>
 
@@ -136,6 +145,16 @@ workspace: **Desktop/eclipse_workspace**
 
 [BAEK 16235. 나무 재테크](./Samsung/BJ_16235_TreeInvestment) : 시뮬레이션
 
+[Kakao 2019 Blind. 오픈채팅방](./Kakao/2019_Blind/OpenChat)
+
+[Kakao 2019 Blind. 실패율](./Kakao/2019_Blind/FailureRate)
+
+[Kakao 2019 Blind. 후보키](./Kakao/2019_Blind/CandidateKey)
+
+[Kakao 2019 인턴. 크레인 인형뽑기 게임](./Kakao/2019_Intern/ClawMachineGame)
+
+[Kakao 2019 인턴. 튜플](./Kakao/2019_Intern/Tuple)
+
 <br><br><br>
 
 
@@ -187,6 +206,8 @@ workspace: **Desktop/eclipse_workspace**
 
 [Programmers. 징검다리](./Programmers/BinarySearch/SteppingStone)
 
+[Kakao 2019 인턴. 징검다리 건너기](./Kakao/2019_Intern/SteppingStone)
+
 <br><br><br>
 
 
@@ -218,6 +239,8 @@ workspace: **Desktop/eclipse_workspace**
 [BAEK 17825. 주사위 윷놀이](./Samsung/BJ_17825_Yoot) : DFS(백트래킹), 시뮬레이션
 
 [BAEK 17142. 연구소 3](./Samsung/BJ_17142_Lab3) : DFS(조합), BFS, 시뮬레이션
+
+[Kakao 2019 인턴. 불량 사용자](./Kakao/2019_Intern/BadUser)
 
 <br><br><br>
 
@@ -295,5 +318,16 @@ workspace: **Desktop/eclipse_workspace**
 [Programmers. 쇠막대기](./Programmers/Stack&Queue/IronBar)
 
 [Programmers. 주식가격](./Programmers/Stack&Queue/StockPrice)
+
+[Kakao 2019 인턴. 호텔 방 배정](./Kakao/2019_Intern/HotelRoom)
+
+<br><br><br>
+
+
+## &#127838; 유니온 파인드(Union-Find)
+
+[Programmers. 섬 연결하기](./Programmers/Greedy/Island) : Prim, Kruskal
+
+[Kakao 2019 인턴. 호텔 방 배정](./Kakao/2019_Intern/HotelRoom)
 
 <br><br><br>
