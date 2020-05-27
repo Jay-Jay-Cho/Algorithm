@@ -1,5 +1,5 @@
-# [지형이동](https://programmers.co.kr/learn/courses/30/lessons/42890)
-* **참고자료** : 엄슴
+# [지형이동](https://programmers.co.kr/learn/courses/30/lessons/62050)
+* **참고자료** : https://algorithmstudy-mju.tistory.com/115
 
 <br>
 
