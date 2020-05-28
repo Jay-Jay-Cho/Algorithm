@@ -1,33 +1,48 @@
-# [쿠키 구입](https://programmers.co.kr/learn/courses/30/lessons/49995)
-* **참고자료** : https://kyounju.tistory.com/6
+# [배달](https://programmers.co.kr/learn/courses/30/lessons/12978)
+* **참고자료** : 엄슴.
 
 <br>
 
 ## &#10095;&#10095;&#10095; 전체 코드
 ```java
 class Solution {
-    public int solution(int[] cookie) {
+    public int solution(int N, int[][] road, int K) {
         int answer = 0;
-        int n = cookie.length;
-        int[] sum = new int[n+1];
-        for(int i=0;i<n;i++) {
-        	sum[i+1] = sum[i]+cookie[i];
+        int infinite = Integer.MAX_VALUE/3;
+        int[][] map = new int[N+1][N+1];
+        for(int i=1;i<map.length;i++) {
+        	for(int j=1;j<map.length;j++) {
+        		if(i==j) map[i][j] = 0;
+        		else map[i][j] = infinite;
+        	}
         }
 
-        for(int m=1;m<n;m++) {
-        	int child_1 = sum[m];
-        	for(int r=m+1;r<=n;r++) {
-        		int child_2 = sum[r]-child_1;
-        		if(answer > child_2 || child_2 > child_1) continue;
-        		for(int l=0;l<m;l++) {
-    				if(child_2 == child_1 - sum[l]) {
-        				answer = Math.max(answer, child_2);
-        				break;
-        			}
+        for(int i=0;i<road.length;i++) {
+        	int from = road[i][0];
+        	int to = road[i][1];
+        	int cost = road[i][2];
+        	if(map[from][to]!= 0 || map[from][to]!= infinite) {
+        		if(map[from][to]<cost) continue;
+        		else {
+        			map[from][to] = cost;
+                	map[to][from] = cost;
         		}
         	}
         }
 
+        for(int k=1;k<=N;k++){	// 중간 경유
+            for(int i=1;i<=N;i++) {	// 시작
+            	for(int j=1;j<=N;j++) {	// 도착
+            		if(map[i][j] > map[i][k]+map[k][j]) {
+            			map[i][j] = map[i][k]+map[k][j];
+            		}
+            	}
+            }
+        }
+
+        for(int i=1;i<=N;i++) {
+        	if(map[1][i]<=K) answer++;
+        }
 
         return answer;
     }
@@ -36,58 +51,105 @@ class Solution {
 <br><br>
 
 ## &#10095;&#10095;&#10095; 설명
-* Level 4
-* 시뮬레이션
-* 한 명의 아들에게 줄 수 있는 가장 많은 과자 수를 return
+* Level 3
+* 최단경로(플로이드-워셜 or 다익스트라)
+* 음식 주문을 받을 수 있는 마을의 개수를 return
 <br><br>
 
 
 ## &#10095;&#10095;&#10095; 접근법   
-#### 1. 각 바구니의 누적 합 배열 만들기
-#### 2. 3중 반복문을 통해 answer의 최댓값을 계속해서 갱신
-* 첫번째 반복문 = `m` = 첫째 아들
-* 두번째 반복문 = `r` = 둘째 아들
-* 세번째 반복문 = `l`
+#### 1. cost 배열 초기화
+* 자기 자신은 0
+* 그 외의 경로는 infinite
+#### 2. 주어진 road 배열 길이만큼 반복하며, cost 갱신
+* road가 중복될 경우, 최솟값으로 계속해서 갱신
+#### 3. 플로이드-워셜 알고리즘을 통해 각 마을 간 최단경로 구하기
+#### 4. 1번 마을 배열만 뽑아서 answer 계산
 <br><br>
 
 
 ## &#10095;&#10095;&#10095; 풀이
-#### 1. 각 바구니의 누적 합 배열 만들기
+#### 1. cost 배열 초기화
 ```java
-int[] sum = new int[n+1];
-for(int i=0;i<n;i++) {
-  sum[i+1] = sum[i]+cookie[i];
+int infinite = Integer.MAX_VALUE/3;
+int[][] map = new int[N+1][N+1];
+for(int i=1;i<map.length;i++) {
+  for(int j=1;j<map.length;j++) {
+    if(i==j) map[i][j] = 0;
+    else map[i][j] = infinite;
+  }
 }
 ```
-#### 2. 3중 반복문을 통해 answer의 최댓값을 계속해서 갱신
+#### 2. 주어진 road 배열 길이만큼 반복하며, cost 갱신
 ```java
-for(int m=1;m<n;m++) {
-  int child_1 = sum[m]; // 첫째 아들의 쿠키 갯수 (1~m)
-  for(int r=m+1;r<=n;r++) {
-    int child_2 = sum[r]-child_1; // 둘째 아들의 쿠키 갯수 (m+1~r)
-    // 기존 answer이 크거나, 이미 둘째 아들의 쿠키 갯수가 첫째 아들보다 많다면 의미X
-    if(answer > child_2 || child_2 > child_1) continue;
-
-    // 첫째 아들의 쿠키 갯수를 1~m에서 l~m으로 바꿔주기
-    for(int l=0;l<m;l++) {
-    if(child_2 == child_1 - sum[l]) {
-        answer = Math.max(answer, child_2);
-        break;
-      }
+for(int i=0;i<road.length;i++) {
+  int from = road[i][0];
+  int to = road[i][1];
+  int cost = road[i][2];
+  if(map[from][to]!= 0 || map[from][to]!= infinite) {
+    if(map[from][to]<cost) continue;
+    else {
+      map[from][to] = cost;
+          map[to][from] = cost;
     }
   }
+}
+```
+#### 3. 플로이드-워셜 알고리즘을 통해 각 마을 간 최단경로 구하기
+```java
+for(int k=1;k<=N;k++){	// 중간 경유
+    for(int i=1;i<=N;i++) {	// 시작
+      for(int j=1;j<=N;j++) {	// 도착
+        if(map[i][j] > map[i][k]+map[k][j]) {
+          map[i][j] = map[i][k]+map[k][j];
+        }
+      }
+    }
+}
+```
+#### 4. 1번 마을 배열만 뽑아서 answer 계산
+```java
+for(int i=1;i<=N;i++) {
+  if(map[1][i]<=K) answer++;
 }
 ```
 
 <br><br>
 
 ## &#10095;&#10095;&#10095; 실수
-#### 1. 둘째 아들이 받을 수 있는 과자바구니의 갯수가 하나일 거라고 생각함
-* 첫째 아들은 l~m, 둘째 아들은 m+1~r이기 때문에 실수..
+#### 1. 마을과 마을을 연결하는 도로의 갯수가 여러 개인 경우를 생각못함
+* 따라서, cost가 최소인 경우로 계속해서 갱신
+```java
+// 실수
+for(int i=0;i<road.length;i++) {
+  int from = road[i][0];
+  int to = road[i][1];
+  int cost = road[i][2];
+  map[from][to] = cost;
+  map[to][from] = cost;
+}
+
+// 정답
+for(int i=0;i<road.length;i++) {
+  int from = road[i][0];
+  int to = road[i][1];
+  int cost = road[i][2];
+  if(map[from][to]!= 0 || map[from][to]!= infinite) {
+    if(map[from][to]<cost) continue;
+    else {
+      map[from][to] = cost;
+          map[to][from] = cost;
+    }
+  }
+}
+```
 <br><br>
 
 
 ## &#10095;&#10095;&#10095; 꿀팁
+#### 각 노드 간 최단 경로를 계산하는 문제에는 `다익스트라` 활용 가능
+* 이 문제의 경우, n이 50이라 플로이드-워셜이 가능하지만, 보통 시간복잡도가 `n^3`이기 때문에
+* 다익스트라의 경우, 시간복잡도는 보통 `E*logE`
 <br><br>
 
 ## &#10095;&#10095;&#10095; 숙지해야할 점
