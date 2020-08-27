@@ -187,9 +187,9 @@ workspace: **Desktop/eclipse_workspace**
 
 [2018 Summer/Winter Coding. 쿠키 구입](./Programmers/2018_Summer_Winter_Coding/PurchasingCookie)
 
-[Kakao 2020 인턴. 키패드 누르기](./Kakao/2020_Intern/수식 최대화)
+[Kakao 2020 인턴. 키패드 누르기](./Kakao/2020_Intern/키패드_누르기)
 
-[Kakao 2020 인턴. 수식 최대화](./Kakao/2020_Intern/키패드 누르기)
+[Kakao 2020 인턴. 수식 최대화](./Kakao/2020_Intern/수식_최대화)
 
 <br><br><br>
 
