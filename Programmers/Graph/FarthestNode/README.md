@@ -1,6 +1,6 @@
 
 
-# [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/43236)
+# [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189)
 * **참고자료** : https://lkhlkh23.tistory.com/110
 * **참고자료** : https://heedipro.tistory.com/233
 <br>
