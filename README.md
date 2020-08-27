@@ -93,6 +93,10 @@ workspace: **Desktop/eclipse_workspace**
 
 [Kakao 2019 인턴. 징검다리 건너기](./Kakao/2019_Intern/SteppingStone)
 
+[Kakao 2020 인턴. 키패드 누르기](./Kakao/2020_Intern/수식 최대화)
+
+[Kakao 2020 인턴. 수식 최대화](./Kakao/2020_Intern/키패드 누르기)
+
 <br><br><br>
 
 ## &#127801; [삼성 기출](https://www.acmicpc.net/workbook/view/1152)
@@ -182,6 +186,10 @@ workspace: **Desktop/eclipse_workspace**
 [2018 Summer/Winter Coding. 방문 길이](./Programmers/2018_Summer_Winter_Coding/VisitLength)
 
 [2018 Summer/Winter Coding. 쿠키 구입](./Programmers/2018_Summer_Winter_Coding/PurchasingCookie)
+
+[Kakao 2020 인턴. 키패드 누르기](./Kakao/2020_Intern/수식 최대화)
+
+[Kakao 2020 인턴. 수식 최대화](./Kakao/2020_Intern/키패드 누르기)
 
 <br><br><br>
 
