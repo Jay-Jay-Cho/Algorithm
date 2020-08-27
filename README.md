@@ -93,9 +93,9 @@ workspace: **Desktop/eclipse_workspace**
 
 [Kakao 2019 인턴. 징검다리 건너기](./Kakao/2019_Intern/SteppingStone)
 
-[Kakao 2020 인턴. 키패드 누르기](./Kakao/2020_Intern/수식 최대화)
+[Kakao 2020 인턴. 키패드 누르기](./Kakao/2020_Intern/수식_최대화)
 
-[Kakao 2020 인턴. 수식 최대화](./Kakao/2020_Intern/키패드 누르기)
+[Kakao 2020 인턴. 수식 최대화](./Kakao/2020_Intern/키패드_누르기)
 
 <br><br><br>
 
